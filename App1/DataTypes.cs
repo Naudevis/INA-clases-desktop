@@ -35,10 +35,6 @@ namespace App1
             fromInt = Double.Parse(2);
             fromInt = Convert.ToDouble(2);
              */
-            double a = 100;
-            double b = 100;
-            Console.WriteLine(nums.);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
