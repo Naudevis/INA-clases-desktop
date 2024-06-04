@@ -41,6 +41,24 @@ namespace App1.Forms
         {
             cars[i++] = textBox1.Text;
             label2.Text = i + "";
+            
+        }
+      
+        private void button4_Click(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            Array.Resize(ref cars, i);
+            Array.Sort(cars);
+            comboBox2.Items.AddRange(cars);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Array.Resize(ref cars, i);
+            Array.Sort(cars);
+            Array.Reverse(cars);
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(cars);
         }
     }
 }
