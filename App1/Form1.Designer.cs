@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Btn = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnConst = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,11 +64,33 @@
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 2;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(463, 402);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "compose";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnConst
+            // 
+            this.btnConst.Location = new System.Drawing.Point(367, 402);
+            this.btnConst.Name = "btnConst";
+            this.btnConst.Size = new System.Drawing.Size(75, 23);
+            this.btnConst.TabIndex = 3;
+            this.btnConst.Text = "Const";
+            this.btnConst.UseVisualStyleBackColor = true;
+            this.btnConst.Click += new System.EventHandler(this.btnConst_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 516);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnConst);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.Btn);
             this.Controls.Add(this.label1);
@@ -82,6 +106,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnConst;
     }
 }
 

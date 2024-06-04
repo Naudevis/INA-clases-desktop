@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App1.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,18 @@ namespace App1
         {
             MessageBox.Show($"Hola {txtName.Text}");
             var form = new DataTypes();
+            form.ShowDialog();
+        }
+
+        private void btnConst_Click(object sender, EventArgs e)
+        {
+            var form = new Constantes();
+            form.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form = new ValoresCompuestos();
             form.ShowDialog();
         }
     }
