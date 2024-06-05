@@ -64,6 +64,12 @@
     <Compile Include="Forms\Constantes.Designer.cs">
       <DependentUpon>Constantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EstructuraControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EstructuraControl.Designer.cs">
+      <DependentUpon>EstructuraControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ValoresCompuestos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Constantes.resx">
       <DependentUpon>Constantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EstructuraControl.resx">
+      <DependentUpon>EstructuraControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ValoresCompuestos.resx">
       <DependentUpon>ValoresCompuestos.cs</DependentUpon>

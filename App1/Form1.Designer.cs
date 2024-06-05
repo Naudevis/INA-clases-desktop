@@ -34,6 +34,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnConst = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,11 +85,22 @@
             this.btnConst.UseVisualStyleBackColor = true;
             this.btnConst.Click += new System.EventHandler(this.btnConst_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(146, 359);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "control str";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 516);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnConst);
             this.Controls.Add(this.txtName);
@@ -108,6 +120,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnConst;
+        private System.Windows.Forms.Button button1;
     }
 }
 

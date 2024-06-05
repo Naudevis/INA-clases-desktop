@@ -36,5 +36,11 @@ namespace App1
             var form = new ValoresCompuestos();
             form.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var form = new EstructuraControl();
+            form.ShowDialog();
+        }
     }
 }
