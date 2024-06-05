@@ -92,40 +92,31 @@ namespace App1.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var dtDias = dataGridView1;
-            var diasSemana = dias;
-            if (dtDias.SelectedCells[0] != null)
+            if (dataGridView1.SelectedCells[0] != null &&
+                !String.IsNullOrEmpty((string)dataGridView1.SelectedCells[0].Value)
+               )
             {
-                var diaXborrar = (string)dtDias.SelectedCells[0].Value;
-                DialogResult opcionUsuario = MessageBox.Show($"Desea eliminar el dia {dtDias.SelectedCells[0].Value}?",
+                DialogResult opcionUsuario = MessageBox.Show($"Desea eliminar el dia {dataGridView1.SelectedCells[0].Value}?",
                 "Advertencia", MessageBoxButtons.YesNo);
                 switch (opcionUsuario)
                 {
                     case DialogResult.Yes:
 
-
-                        if (Array.Exists(diasSemana, dia=>dia==diaXborrar))
+                        for (int i = 0; i < dias.Length - 1; i++)
                         {
-                            int index = Array.IndexOf(diasSemana,diaXborrar);
-                            if (index!=-1)
+                            int idx = dataGridView1.SelectedCells[0].RowIndex;
+                            if (i >= idx)
                             {
-                                for (int i = 0; i < diasSemana.Length - 1; i++)
-                                {
-                                    if (i >= index)
-                                    {
-                                        diasSemana[i] = diasSemana[i + 1];
-                                    }
-                                }
+                                dias[i] = dias[i + 1];
                             }
                         }
-                       
-                        Array.Resize(ref diasSemana, diasSemana.Length - 1);
+                        Array.Resize(ref dias, dias.Length - 1);
 
-                        dtDias.Rows.Clear();
-                        foreach (var item in diasSemana)
+                        dataGridView1.Rows.Clear();
+                        foreach (var item in dias)
                         {
 
-                            dtDias.Rows.Add(item);
+                            dataGridView1.Rows.Add(item);
                         }
                         break;
                     case DialogResult.No:
@@ -134,9 +125,37 @@ namespace App1.Forms
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            if (textBox2.Text!="")
+            {
+                for (int _i = 0; _i < i - 1; _i++)
+                {
+                    if (dias[_i].Contains(textBox2.Text))
+                    {
+                        dataGridView1.Rows.Add(dias[_i]);
+                    }
+                }
+            }
+            else
+            {
+                dataGridView1.Rows.Clear();
+                for (int _i = 0; _i < i - 1; _i++)
+                {
+                    dataGridView1.Rows.Add(dias[_i]);
+                }
+            }
 
+
+        }
+
+
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.ReadOnly = false;
+            Console.WriteLine(dataGridView1.SelectedCells[0]);
         }
     }
 }
