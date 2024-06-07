@@ -53,6 +53,7 @@
             this.materialSlider1.Size = new System.Drawing.Size(250, 40);
             this.materialSlider1.TabIndex = 0;
             this.materialSlider1.Text = "materialSlider1";
+            this.materialSlider1.onValueChanged += new MaterialSkin.Controls.MaterialSlider.ValueChanged(this.materialSlider1_onValueChanged);
             // 
             // materialTextBox21
             // 
@@ -111,6 +112,7 @@
             this.materialTextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.materialTextBox22.TrailingIcon = null;
             this.materialTextBox22.UseSystemPasswordChar = false;
+            this.materialTextBox22.Leave += new System.EventHandler(this.materialTextBox22_Leave);
             // 
             // materialTextBox23
             // 

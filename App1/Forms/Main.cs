@@ -51,5 +51,19 @@ namespace App1.Forms
                 }
             }
         }
+
+        private void materialSlider1_onValueChanged(object sender, int newValue)
+        {
+            int unit = materialSlider1.Value;
+            double price = Double.Parse(materialTextBox22.Text);
+            materialTextBox23.Text = (price * unit).ToString();
+        }
+
+        private void materialTextBox22_Leave(object sender, EventArgs e)
+        {
+            int unit = materialSlider1.Value;
+            double price = Double.Parse(materialTextBox22.Text);
+            materialTextBox23.Text = (price * unit).ToString();
+        }
     }
 }
