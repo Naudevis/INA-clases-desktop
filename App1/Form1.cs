@@ -8,14 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace App1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MaterialForm
     {
         public Form1()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            //materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Green400, Primary.Green400,
+                 Primary.Green400,Accent.Green400, TextShade.WHITE
+                );
+
         }
 
         private void button1_Click(object sender, EventArgs e)
