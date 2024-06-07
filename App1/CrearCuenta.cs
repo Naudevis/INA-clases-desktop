@@ -20,8 +20,8 @@ namespace App1
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            var pass = materialTextBox22.Text;
-            var user = materialTextBox21.Text;
+            var pass = txtContrasennia.Text;
+            var user = txtUsuarioCrear.Text;
             if (user.Equals(""))
             {
                 MessageBox.Show("No ingresaste el nombre del usuario");
@@ -65,7 +65,7 @@ namespace App1
                             )
                             {
                                 var loginFrm =new Login();
-                                loginFrm.materialTextBox21.Text= user;
+                                loginFrm.txtUsuario.Text= user;
                                 loginFrm.Show();
                                 this.Hide();
                             }
@@ -88,6 +88,16 @@ namespace App1
             var frm = new Login();
             frm.ShowDialog();
             this.Dispose();
+        }
+
+        private void materialTextBox21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearCuenta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

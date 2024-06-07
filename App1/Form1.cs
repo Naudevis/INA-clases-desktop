@@ -18,13 +18,13 @@ namespace App1
         public Form1()
         {
             InitializeComponent();
-            var materialSkinManager = MaterialSkinManager.Instance;
+           /* var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Green400, Primary.Green400,
                  Primary.Green400,Accent.Green400, TextShade.WHITE
-                );
+                );*/
 
         }
 
