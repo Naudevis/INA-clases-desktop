@@ -13,8 +13,8 @@ namespace App1
 {
     public partial class Login : MaterialForm
     {
-        static string[] users = { "admin" };
-        static string[] pass = { "admin" };
+        public static string[] users = { "admin" };
+        public static string[] pass = { "admin" };
         public Login()
         {
             InitializeComponent();
@@ -26,14 +26,14 @@ namespace App1
             var user = materialTextBox21.Text;
             var frm = new Form1();
             frm.Show();
-            this.Dispose();
+            this.Hide();
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
         {
             var frm = new CrearCuenta();
-            frm.ShowDialog();
-            this.Dispose();
+            frm.Show();
+            this.Hide();
         }
 
         private void materialTextBox22_Click(object sender, EventArgs e)

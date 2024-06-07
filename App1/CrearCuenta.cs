@@ -22,15 +22,71 @@ namespace App1
         {
             var pass = materialTextBox22.Text;
             var user = materialTextBox21.Text;
-            var frm = new Form1();
-            frm.Show();
-            this.Dispose();
+            if (user.Equals(""))
+            {
+                MessageBox.Show("No ingresaste el nombre del usuario");
+            }
+            else
+            {
+                if (pass.Equals("")/*txtRepiteContrasennia.Text.Equals("")*/)
+                {
+                    MessageBox.Show("No ingresaste la contraseña");
+
+
+                }
+                else
+                {
+                    if (!pass.Equals(pass/*txtRepiteContrasennia*/))
+                    {
+                        MessageBox.Show("Las contraseñas no coinciden!");
+
+                    }
+                    else
+                    {
+                        //Codigo para empezar a crear el usuario
+                        if (Array.Exists(Login.users, u => u == user))
+                        {
+                            MessageBox.Show("YA existe");
+                        }
+                        else
+                        {
+                            Array.Resize(ref Login.users, Login.users.Length + 1);
+                            Array.Resize(ref Login.pass, Login.pass.Length + 1);
+                            Login.users[Login.users.Length - 1] = user;
+                            Login.pass[Login.pass.Length - 1] = pass;
+                            MessageBox.Show("Ya se registro");
+                            if (
+                                MessageBox.Show(
+                                    "Alerta",
+                                    "Deseas iniciar sesion",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Asterisk
+                                    ) == DialogResult.Yes
+                            )
+                            {
+                                var loginFrm =new Login();
+                                loginFrm.materialTextBox21.Text= user;
+                                loginFrm.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            //var frm = new Form1();
+            //frm.Show();
+            //this.Dispose();
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
         {
             var frm = new Login();
-            frm.ShowDialog();  
+            frm.ShowDialog();
             this.Dispose();
         }
     }

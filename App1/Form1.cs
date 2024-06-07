@@ -19,7 +19,7 @@ namespace App1
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
-            //materialSkinManager.AddFormToManage(this);
+            materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Green400, Primary.Green400,
@@ -51,6 +51,11 @@ namespace App1
         {
             var form = new EstructuraControl();
             form.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
