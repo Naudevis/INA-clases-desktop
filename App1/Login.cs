@@ -16,8 +16,8 @@ namespace App1
 {
     public partial class Login : MaterialForm
     {
-        public static string[] users = { "admin" };
-        public static string[] pass = { "admin" };
+        public static string[] users = { "Asley", "Silvia" };
+        public static string[] pass = { "116850308" };
         public Login()
         {
             InitializeComponent();
@@ -25,34 +25,26 @@ namespace App1
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            string usuarioAutentica = txtUsuario.Text;
-            string passwdAutentica = txtContrasennia.Text;
-
-
-            bool existeUsuario = Array.Exists(users,filtro => filtro == usuarioAutentica);
-            bool existeContrasennia = Array.Exists(users, filtro => filtro == passwdAutentica);
-
-            if (existeUsuario && existeContrasennia)
-
+            var pass= materialTextBox22.Text;
+            var user = materialTextBox21.Text;
+            if(Array.Exists(Login.users, u => u == user))
             {
-                Principal principal = new Principal();
-                principal.Show();
-                Visible = false; // oculta la ventana
+                if(Array.Exists(Login.pass, u => u == pass))
+                {
+                    var frm = new Form1();
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("contra incorrecto");
+                }
             }
             else
             {
-
-                MessageBox.Show("Usuario y/o contraseña no coinciden",
-                    "Error de acceso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("No existe user");
             }
-            /*
-            var pass= txtContrasennia.Text;
-            var user = txtUsuario.Text;
-            var frm = new Form1();
-            frm.Show();
-            this.Hide();*/
+            
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)

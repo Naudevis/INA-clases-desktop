@@ -80,11 +80,11 @@
     <Compile Include="Forms\EstructuraControl.Designer.cs">
       <DependentUpon>EstructuraControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Principal.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ValoresCompuestos.cs">
       <SubType>Form</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="Forms\EstructuraControl.resx">
       <DependentUpon>EstructuraControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ValoresCompuestos.resx">
       <DependentUpon>ValoresCompuestos.cs</DependentUpon>
